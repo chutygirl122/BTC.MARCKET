@@ -115,7 +115,7 @@
 
   <nav id="sidebar">
     <button class="close-btn" onclick="toggleMenu()">✖</button>
-    <div class="nav-logo">ROG CRYPTO</div>
+    <div class="nav-logo">pasiya-md  CRYPTO</div>
     <ul>
       <li><a href="#">HOME</a></li>
       <li><a href="#">NEWS</a></li>
@@ -150,7 +150,41 @@
   </main>
 
   <script>
-    function toggleMenu() {
+    function toggleMenu( webpage *Live Market Price*:
+
+```html
+<body>
+  <div class="container">
+    <h1>Welcome to PASIYA-MD Team</h1>
+    <p>Stay updated with the latest bot status and news.</p>
+
+    <h2>📊 Live BTC Price</h2>
+    <p id="btc-price">Loading...</p>
+
+    <a href="https://chat.whatsapp.com/ISXUBw0iKoM4BBK6rR45jh?mode=ac_c" target="_blank" style="  
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      box-shadow: 0 4px 8px rgba(37, 211, 102, 0.4);
+    ">Join Our WhatsApp Channel</a>
+  </div>
+
+  <script>
+    async function fetchBTCPrice() {
+      try {
+        const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+        const data = await res.json();
+        document.getElementById('btc-price').innerText = "$" + data.bitcoin.usd.toLocaleString();
+      } catch (error) {
+        document.getElementById('btc-price').innerText = "Failed to load";
+      }
+    }
+    fetchBTCPrice();) {
       document.getElementById('sidebar').classList.toggle('open');
     }
   </script>
